@@ -1,0 +1,31 @@
+{
+  "name": "fem-nft-preview-card",
+  "version": "1.0.0",
+  "description": "NFT preview card component challenge hub",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run copy && sass ./src/assets/styles/index.scss ./dist/css/index.css",
+    "clean": "rimraf dist",
+    "copy": "cpr ./src/index.html ./dist/index.html && cpr ./src/assets/favicon-32x32.png ./dist/favicon-32x32.png && cpr ./src/assets/images ./dist/images",
+    "serve": "serve dist",
+    "start": "nodemon -e scss,html --watch ./src/index.html --watch ./src/assets/styles --exec \"npm run build\""
+  },
+  "keywords": [
+    "NFT",
+    "preview",
+    "card",
+    "component",
+    "challenge",
+    "frontend",
+    "mentor"
+  ],
+  "author": "jairovg",
+  "license": "ISC",
+  "devDependencies": {
+    "cpr": "^3.0.1",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.4",
+    "serve": "^13.0.2"
+  }
+}
