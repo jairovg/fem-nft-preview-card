@@ -1,0 +1,136 @@
+.card {
+  max-width: 350px;
+  border-radius: 15px;
+  padding: 25px 25px 23px 24px;
+  background-color: var(--color-neutral-02);
+
+  &__header-link {
+    position: relative;
+    display: block;
+    line-height: 0;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      left: 0;
+      opacity: 0;
+      transition: opacity .2s cubic-bezier(.15, 0, .15, 0);
+    }
+
+    &::before {
+      background-color: var(--color-primary-02);
+    }
+
+    &::after {
+      background-image: url("../images/icon-view.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover::before {
+      opacity: .5;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__header-img {
+    width: 100%;
+    border-radius: 8px
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.222rem;
+    line-height: 1.54rem;
+    margin: 24px 0 12px;
+    color: var(--color-neutral-04);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.444rem;
+    color: var(--color-primary-01);
+  }
+
+  &__body-main {
+    grid-column: 1 / span 2;
+    margin-bottom: 16px;
+  }
+
+  &__body-info {
+    font-size: .834rem;
+    line-height: 1.056rem;
+  }
+
+  &__ether {
+    position: relative;
+    font-weight: 600;
+    padding-left: 17.48px;
+    color: var(--color-primary-02);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 18px;
+      left: 0;
+      background-image: url("../images/icon-ethereum.svg");
+    }
+  }
+
+  &__days {
+    font-weight: 400;
+    justify-self: end;
+
+    &::before {
+      position: relative;
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      left: -4.7px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../images/icon-clock.svg");
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    align-items: center;
+    border-top: solid 1px var(--color-neutral-03);
+    font-size: .834rem;
+    line-height: 1.056rem;
+    padding-top: 16px;
+    color: var(--color-primary-01);
+  }
+
+  &__avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--color-neutral-04);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-neutral-04);
+
+    &:hover,
+    &:active {
+      color: var(--color-primary-02);
+    }
+  }
+}

@@ -1,1 +1,7 @@
+@use "colors";
+@use "resets";
+@use "global";
 
+// TODO: Components usually will be imported in js files
+@use "./components/main";
+@use "./components/card";
