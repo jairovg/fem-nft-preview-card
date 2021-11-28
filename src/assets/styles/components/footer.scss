@@ -1,0 +1,13 @@
+.footer {
+  font-size: 11px; text-align: center;
+  color: var(--color-primary-01);
+
+  &__link {
+    color: var(--color-neutral-04);
+
+    &:hover,
+    &:active {
+      color: var(--color-primary-02);
+    }
+  }
+}
